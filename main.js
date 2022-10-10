@@ -115,26 +115,26 @@ if(document.querySelectorAll(".matched").length==20){
 
     if (score == 0){
         
-        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Perfection!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Perfection!`));
        
     }
 
     else if (score <= 5){
        
-        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Well done!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Well done!`));
         
 
     }
 
     else if (score<=10){
        
-        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Try Again!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Try Again!`));
         
     }
 
     else {
         
-        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Get lost!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Get lost!`));
        
 
     }
