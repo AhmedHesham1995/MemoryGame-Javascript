@@ -115,26 +115,26 @@ if(document.querySelectorAll(".matched").length==20){
 
     if (score == 0){
         
-        congSpan.appendChild(document.createTextNode(`جامد بفتيكة Your score is ${score}`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Perfection!`));
        
     }
 
     else if (score <= 5){
        
-        congSpan.appendChild(document.createTextNode(`تنين Your score is ${score}`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Well done!`));
         
 
     }
 
     else if (score<=10){
        
-        congSpan.appendChild(document.createTextNode(`ييجي منك Your score is ${score}`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Try Again!`));
         
     }
 
     else {
         
-        congSpan.appendChild(document.createTextNode(`خخخخ متلعبش تاني يا علق Your score is ${score}`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${score}.. Get lost!`));
        
 
     }
