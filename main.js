@@ -100,6 +100,48 @@ function checkCards(firstBlock,secondBlock){
        document.getElementById("fail").play();
     }
    
+    finish(Wrong.innerHTML);
 }
 
 
+
+function finish(score){
+if(document.querySelectorAll(".matched").length==20){
+    let end = document.createElement("div");
+    end.classList.add("end-game");
+
+    
+    let congSpan = document.createElement("span");
+
+    if (score == 0){
+        
+        congSpan.appendChild(document.createTextNode(`جامد بفتيكة Your score is ${score}`));
+       
+    }
+
+    else if (score <= 5){
+       
+        congSpan.appendChild(document.createTextNode(`تنين Your score is ${score}`));
+        
+
+    }
+
+    else if (score<=10){
+       
+        congSpan.appendChild(document.createTextNode(`ييجي منك Your score is ${score}`));
+        
+    }
+
+    else {
+        
+        congSpan.appendChild(document.createTextNode(`خخخخ متلعبش تاني يا علق Your score is ${score}`));
+       
+
+    }
+    
+    end.appendChild(congSpan);
+
+    document.body.appendChild(end);
+   
+    }
+}
