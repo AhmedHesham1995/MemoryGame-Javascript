@@ -1,4 +1,4 @@
-function start() {
+let start =function () {
    let name = prompt('what is your name?');
     if(name==null||name==""){
         document.querySelector(".start .hello span").innerHTML= "خضر كراويتة";
@@ -21,22 +21,31 @@ let blocks = Array.from(block.children);
 let orderArray = Array.from(Array.from(block.children).keys());
 
 
-start();
 
 
+document.querySelector(".start-game span").addEventListener("click",function(){
+
+
+    start();
 
     blocks.forEach((block) => {
         block.classList.add("is-flipped");
     });
     
+       
+    setTimeout(()=>{
+    
+        blocks.forEach((block) => {
+            block.classList.remove("is-flipped");
+        });
+    
+    },3000)
+})
 
-setTimeout(()=>{
 
-    blocks.forEach((block) => {
-        block.classList.remove("is-flipped");
-    });
 
-},3000)
+
+
 
 
 
