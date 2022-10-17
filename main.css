@@ -153,18 +153,20 @@ body {
 button {
     position: absolute;
     color: #fff;
-    background-color:rgb(0, 150, 92);
+    background-color: rgb(0, 150, 92);
     border-radius: 6px;
-    padding: 10px;
+    padding: 8px 10px;
     font-weight: bold;
     font-size: 15px;
     text-align: center;
-    top: 96%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: -2px;
+    left: 77%;
+    /* transform: translate(-50%,-50%); */
     cursor: pointer;
     border: 1px solid rgb(0, 150, 92);
+    margin: 20px auto;
 }
+
 
 button:focus{
     outline: none;
