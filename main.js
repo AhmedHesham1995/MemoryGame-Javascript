@@ -8,6 +8,7 @@ let start = function () {
     }
 
 document.querySelector(".start-game").remove();
+document.getElementById("song").play();
 }
 
 
