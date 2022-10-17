@@ -1,4 +1,4 @@
-let start =function () {
+let start = function () {
    let name = prompt('what is your name?');
     if(name==null||name==""){
         document.querySelector(".start .hello span").innerHTML= "خضر كراويتة";
@@ -11,7 +11,6 @@ document.querySelector(".start-game").remove();
 }
 
 
-
 let duration = 1000;
 
 let block = document.querySelector(".gameBlocks");
@@ -21,10 +20,7 @@ let blocks = Array.from(block.children);
 let orderArray = Array.from(Array.from(block.children).keys());
 
 
-
-
 document.querySelector(".start-game span").addEventListener("click",function(){
-
 
     start();
 
@@ -41,13 +37,6 @@ document.querySelector(".start-game span").addEventListener("click",function(){
     
     },3000)
 })
-
-
-
-
-
-
-
 
 random(orderArray);
 
@@ -110,9 +99,8 @@ function checkCards(firstBlock,secondBlock){
     }
    
     finish(Wrong.innerHTML);
+
 }
-
-
 
 function finish(score){
 if(document.querySelectorAll(".matched").length==20){
@@ -122,35 +110,46 @@ if(document.querySelectorAll(".matched").length==20){
     
     let congSpan = document.createElement("span");
 
+    congSpan.className = "cong";
+
+    let HighScore = 20-score;
+
     if (score == 0){
         
-        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Perfection!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${HighScore}.. Perfection!`));
        
     }
 
     else if (score <= 5){
        
-        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Well done!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${HighScore}.. Well done!`));
         
-
     }
 
     else if (score<=10){
        
-        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Try Again!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${HighScore}.. Not Bad!`));
         
     }
 
     else {
         
-        congSpan.appendChild(document.createTextNode(`Your score is ${20-score}.. Get lost!`));
+        congSpan.appendChild(document.createTextNode(`Your score is ${HighScore}.. Get lost!`));
        
-
     }
+
+    let tryAgain = document.createElement("span");
+    tryAgain.className = "span";
+    tryAgain.appendChild(document.createTextNode("Try Again"));
     
     end.appendChild(congSpan);
+    end.appendChild(tryAgain);
 
     document.body.appendChild(end);
-   
+
+    document.querySelector(".end-game .span").addEventListener("click",function(){
+       window.location.reload("refresh");
+       
+    })
     }
 }
