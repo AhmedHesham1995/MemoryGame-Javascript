@@ -11,6 +11,11 @@ document.querySelector(".start-game").remove();
 document.getElementById("song").play();
 }
 
+document.querySelector("button").addEventListener("click",function(){
+    window.location.reload("refresh");
+    
+ })
+ 
 
 let duration = 1000;
 
@@ -152,5 +157,6 @@ if(document.querySelectorAll(".matched").length==20){
        window.location.reload("refresh");
        
     })
+
     }
 }
