@@ -155,12 +155,12 @@ button {
     color: #fff;
     background-color: rgb(0, 150, 92);
     border-radius: 6px;
-    padding: 8px 10px;
+    padding: 10px 10px;
     font-weight: bold;
     font-size: 15px;
     text-align: center;
     top: -2px;
-    left: 77%;
+    left: 79%;
     /* transform: translate(-50%,-50%); */
     cursor: pointer;
     border: 1px solid rgb(0, 150, 92);
